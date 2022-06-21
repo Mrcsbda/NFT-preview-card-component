@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --margintop: 15px;
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);  
+}
+
+.card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2 {
+    background-color: hsl(216, 50%, 16%);
+    height: 460px;
+    width:255px;
+    border-radius: 5%;
+    padding: 20px;
+    box-shadow: -2px 20px 2px 10px hsl(216, 53%, 10%);
+}
+
+.image {
+    height: 250px;
+    width: 255px;
+    border-radius: 5%;
+}
+
+.title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin-top: var(--margintop);
+    font-weight: 600;
+}
+
+.text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    color: var(--Softblue);
+    margin-top: var(--margintop);
+}
+
+.card3, .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text1, .text2 {
+    margin-top: var(--margintop);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+}
+
+.text1 {
+    color: var(--Cyan);
+}
+
+.text2 {
+    color: var(--Softblue);
+}
+
+.icons {
+    height: 20px;
+    width: 15px;
+    margin-right: 5px;
+    margin-top: var(--margintop);
+}
+
+.card3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+}
+
+.card4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--margintop);
+}
+
+.creador {
+    width: 40px;
+    height: 40px;
+    outline: 1px solid white;
+    border-radius: 50%;
+
+}
+
+.cita {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    margin-right: 27px;
+    color: var(--Softblue);
+}
+
+.nombre {
+    color: white;
+}
+
+.title:hover, .nombre:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container-icon-view {
+    background-color:var(--Cyan); 
+    position: absolute;
+    top: 81px;
+    left: 538px;
+    height: 250px;
+    width: 255px;
+    border-radius: 5%;
+    background-color: hsla(178, 100%, 50%,0);
+}
+
+.icon-view {
+    position: absolute;
+    top:105px;
+    left: 105px;
+    opacity: 0;
+}
+.container-icon-view:hover { 
+    background-color: hsla(178, 100%, 50%,0.5); 
+    cursor: pointer;  
+}
+
+.container-icon-view:hover .icon-view {
+    opacity: 1; 
+}
