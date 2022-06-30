@@ -24,16 +24,39 @@ body {
 .card2 {
     background-color: hsl(216, 50%, 16%);
     height: 460px;
-    width:255px;
-    border-radius: 5%;
+    width: min(95%,255px);
+    border-radius: 8px;
     padding: 20px;
     box-shadow: -2px 20px 2px 10px hsl(216, 53%, 10%);
 }
 
 .image {
-    height: 250px;
-    width: 255px;
-    border-radius: 5%;
+    width: 100%;
+    display: block;
+}
+
+.image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%,0.4);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-container:hover::before {
+    opacity: 1;
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.5s;
 }
 
 .title {
@@ -54,6 +77,7 @@ body {
 .card3, .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .text1, .text2 {
@@ -71,8 +95,6 @@ body {
 }
 
 .icons {
-    height: 20px;
-    width: 15px;
     margin-right: 5px;
     margin-top: var(--margintop);
 }
@@ -111,30 +133,4 @@ body {
 .title:hover, .nombre:hover {
     color: var(--Cyan);
     cursor: pointer;
-}
-
-.container-icon-view {
-    background-color:var(--Cyan); 
-    position: absolute;
-    top: 81px;
-    left: 538px;
-    height: 250px;
-    width: 255px;
-    border-radius: 5%;
-    background-color: hsla(178, 100%, 50%,0);
-}
-
-.icon-view {
-    position: absolute;
-    top:105px;
-    left: 105px;
-    opacity: 0;
-}
-.container-icon-view:hover { 
-    background-color: hsla(178, 100%, 50%,0.5); 
-    cursor: pointer;  
-}
-
-.container-icon-view:hover .icon-view {
-    opacity: 1; 
 }
